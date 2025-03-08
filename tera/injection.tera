@@ -1,0 +1,11 @@
+package {{ pkg_name }}.{{ module_name }}
+
+import org.koin.core.module.dsl.singleOf
+import org.koin.dsl.module
+
+object {{ module_name | capitalize }}Injection {
+    val inject =
+        module {
+            singleOf(::{{ module_name | capitalize }}Service)
+        }
+}

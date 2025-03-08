@@ -1,0 +1,5 @@
+package {{ pkg_name }}.{{ module_name }}
+
+import org.koin.core.component.KoinComponent
+
+class {{ module_name | capitalize }}Service : KoinComponent {}
