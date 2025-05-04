@@ -1,14 +1,14 @@
-package {{ pkg_name }}.{{ module_name }}
+package {{ pkg }}.{{ name }}
 
 import io.ktor.server.application.*
 import io.ktor.server.routing.*
 import org.koin.ktor.ext.inject
 
-fun Application.configure{{ module_name | capitalize }}Routing() {
-    val service by inject<{{ module_name | capitalize }}Service>()
+fun Application.configure{{ name | capitalize }}Routing() {
+    val service by inject<{{ name | capitalize }}Service>()
 
     routing {
 
-        route("/{{ module_name }}") {}
+        route("/{{ name }}") {}
     }
 }
